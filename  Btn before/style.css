@@ -1,0 +1,36 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.btn{
+    padding: 20px 50px;
+    border-radius: 9px;
+    top: 30px;
+    border: 1px solid red;
+    background-color: transparent;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 9px;
+    background-color: red;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: width 0.8s ease-in-out;
+    box-shadow: 0px 10px 20px 0px rgba(80, 51, 124, 0.5);
+}
+
+.btn:hover::before{
+    width: 100%;
+}
